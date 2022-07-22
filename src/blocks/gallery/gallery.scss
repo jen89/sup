@@ -1,0 +1,155 @@
+.gallery {
+	$self: &;
+
+	&__inner {}
+
+	&__box {
+		display: flex;
+		gap: 68px;
+		margin-top: 115px;
+
+		@include media ('<=xlg') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__text {
+		width: 350px;
+
+		@include media ('<=xlg') {
+			width: 100%;
+		}
+	}
+
+	&__min {
+		display: grid;
+		padding: 72px 31px 52px;
+		// box-sizing: border-box;
+		gap: 24px 30px;
+		grid-template-columns: 481px 208px;
+		grid-template-rows: 432px 300px;
+		margin-top: -35%;
+		margin-bottom: 150px;
+		position: relative;
+
+		@include media ('<=xlg') {
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: auto auto;
+			margin-top: 0;
+			width: 100%;
+		}
+
+		@include media ('<=sm') {
+			margin-bottom: 50px;
+		}
+
+		@include media ('<=xs') {
+			padding: 20px 10px 20px;
+			gap: 10px;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			border: 3px solid $colorDark;
+			border-radius: 200px 0px 300px;
+			z-index: 5;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+
+			@include media ('<=xxs') {
+				display: none;
+			}
+		}
+	}
+
+	&__min-img {
+		&_1 {
+			grid-column: 1/3;
+			border-radius: 400px 0px 0px 0px;
+		}
+
+		&_2 {
+			border-radius: 0px 0px 0px 300px;
+		}
+
+		@include media ('<=xlg') {
+			width: 100%;
+			align-self: stretch;
+		}
+	}
+
+	&__max {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 300px 469px 391px;
+		grid-template-rows: 340px 270px 270px;
+
+		@include media ('<=xlg') {
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-template-rows: auto auto auto;
+			width: 100%;
+		}
+
+		@include media ('<=xs') {
+			gap: 10px;
+		}
+	}
+
+	&__max-img {
+
+		&_1 {
+			max-width: 480px;
+		}
+
+		&_2 {
+			grid-column: 2 / -1;
+			justify-self: end;
+			border-radius: 0px 500px 0px 0px;
+		}
+
+		&_3 {
+			border-radius: 0px 0px 150px 0px;
+		}
+
+		&_4 {
+			border-radius: 0px 200px 0px 0px;
+		}
+
+		&_5 {
+			border-radius: 200px 0px 0px 0px;
+		}
+
+		&_6 {
+			grid-column: 2 / -1;
+			border-radius: 0px 0px 0px 400px;
+		}
+
+		@include media ('<=xlg') {
+			width: 100%;
+			align-self: stretch;
+		}
+
+	}
+
+	&__max-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0px 0px 0px 200px;
+		background-color: $colorBlue;
+		color: $colorWhite;
+		font-weight: 800;
+		font-size: 32px;
+		line-height: 39px;
+		text-align: center;
+
+		@include media ('<=sm') {
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+
+}

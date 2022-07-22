@@ -1,0 +1,13 @@
+.title {
+	$self: &;
+	text-transform: uppercase;
+	font-family: 'Comfortaa', sans-serif;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 67px;
+
+	@include media ('<=sm') {
+		font-size: 48px;
+		line-height: 56px;
+	}
+}

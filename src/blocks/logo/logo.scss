@@ -1,0 +1,13 @@
+.logo {
+	$self: &;
+	display: block;
+	background: url(images/icons-sprite.svg#icon-logo-view-dark) left center / 158px 35px no-repeat transparent;
+	width: 158px;
+	height: 35px;
+	transition: all .3s ease;
+
+	&:hover {
+		background-image: url(images/icons-sprite.svg#icon-logo-view-blue);
+	}
+
+}

@@ -1,0 +1,126 @@
+.buy {
+	$self: &;
+	padding: 150px 0 0;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		gap: 90px;
+
+		@include media ('<=xlg') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__content {
+		width: 510px;
+		position: relative;
+
+		@include media ('<=xlg') {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		color: $colorBlue;
+		margin-bottom: 50px;
+	}
+
+	&__list {
+		margin-bottom: 25px;
+	}
+
+	&__item {
+		margin-bottom: 25px;
+		width: 285px;
+
+		@include media ('<=xlg') {
+			width: 100%;
+			max-width: 600px;
+		}
+
+		&:hover {
+			.buy__item-title {
+				color: $colorBlue;
+			}
+		}
+	}
+
+	&__item-title {
+		transition: color .3s ease;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		font-family: 'Inter', sans-serif;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		color: $colorDark;
+
+
+	}
+
+	&__price {
+		width: 201px;
+		height: 199px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 42px;
+		background: url(images/icons-sprite.svg#icon-star-view-green);
+		position: absolute;
+		bottom: 130px;
+		right: 0;
+		transition: transform .3s;
+
+		@include media ('<=xlg') {
+			pointer-events: none;
+		}
+
+		@include media ('<=md') {
+			bottom: auto;
+			top: -350px;
+		}
+
+		@include media ('<=xs') {
+			width: 170px;
+			height: 168px;
+			background-size: cover;
+			top: -185px;
+		}
+
+		&:hover {
+			transform: scale(1.3);
+		}
+	}
+
+	&__btn {
+		max-width: 484px;
+		width: 100%;
+		font-family: 'Comfortaa';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 45px;
+		color: $colorBlue;
+		background-color: transparent;
+		cursor: pointer;
+		border: 2px solid $colorBlue;
+		padding: 18px;
+		text-transform: uppercase;
+		transition: all .3s;
+
+		&:hover {
+			background-color: $colorGreen;
+			color: $colorDark;
+			border: 2px solid $colorGreen;
+		}
+	}
+
+	&__img {
+		margin: 0 auto;
+		order: -1;
+	}
+
+}

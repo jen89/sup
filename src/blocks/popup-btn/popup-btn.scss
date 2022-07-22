@@ -1,0 +1,31 @@
+.popup-btn {
+	$self: &;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	padding-top: 70px;
+	background: url(images/icons-sprite.svg#icon-popup-video-view-white) top center / 70px 70px no-repeat transparent;
+	position: absolute;
+	transition: all .3s;
+
+	&:hover {
+		background-image: url(images/icons-sprite.svg#icon-popup-video-view-green);
+
+		span {
+			color: $colorBlue;
+		}
+	}
+
+	span {
+		margin-top: 12px;
+		display: block;
+		color: $colorWhite;
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		transition: all .3s;
+	}
+
+}

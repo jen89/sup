@@ -1,0 +1,120 @@
+.info {
+	$self: &;
+	background: url(images/bg-info.jpg) center / cover no-repeat transparent;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: '';
+		height: 180px;
+		background-color: $colorDark;
+		// margin-top: 180px;
+		// transform: translateY(-180px);
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+	&__top {
+		display: flex;
+		gap: 80px;
+		padding-top: 230px;
+		position: relative;
+		z-index: 6;
+		margin-bottom: 80vh;
+
+		@include media ('<=md') {
+			display: block;
+			margin-bottom: 30vh;
+		}
+	}
+
+	&__top-text {
+		padding-top: 245px;
+		padding-bottom: 30px;
+		margin-bottom: 0;
+		width: 260px;
+		color: $colorWhite;
+		position: relative;
+
+		@include media ('<=md') {
+			width: 100%;
+		}
+
+		&_one {
+			padding-bottom: 115px;
+		}
+
+		&_two {
+			border-bottom: 1px solid $colorWhite;
+
+			@include media ('<=md') {
+				padding-top: 45px;
+			}
+		}
+	}
+
+	&__btn {
+		right: 0;
+		bottom: 0;
+	}
+
+	&__top-img {
+		@include media ('<=md') {
+			width: 227px;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
+	&__specs {
+		display: flex;
+		align-items: center;
+		gap: 130px;
+		padding-bottom: 50px;
+
+		@include media ('<=lg') {
+			gap: 100px;
+		}
+
+		@include media ('<=md') {
+			display: block;
+		}
+	}
+
+	&__specs-title {
+		width: 250px;
+		color: $colorWhite;
+	}
+
+	&__specs-list {
+		width: 590px;
+		border-bottom: 1px solid $colorWhite;
+		border-top: 1px solid $colorWhite;
+		padding: 30px 0;
+		font-weight: 700;
+		color: $colorWhite;
+
+		@include media ('<=xs') {
+			width: 100%;
+		}
+	}
+
+	&__specs-item {
+		margin-bottom: 15px;
+		display: flex;
+		gap: 25px;
+
+		@include media ('<=xs') {
+			display: block;
+		}
+	}
+
+	&__specs-caption {
+		width: 192px;
+	}
+
+	&__specs-text {}
+
+}
